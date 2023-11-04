@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "329411833963",
+    "project_id": "superpets-1",
+    "storage_bucket": "superpets-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329411833963:android:ae4cac043f57f51102c12e",
+        "android_client_info": {
+          "package_name": "com.example.super_paws"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329411833963-kb06m0eelrvtr22fb4d7d98hie45sgqc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd8d2VBXvAgm8fX2pX9BQSPmwGZO5MJtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329411833963-kb06m0eelrvtr22fb4d7d98hie45sgqc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
