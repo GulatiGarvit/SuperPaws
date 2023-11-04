@@ -1,16 +1,17 @@
-# super_paws
+# SuperPaws
+### _Escape Character (Built at HackCBS 6.0)_
+## Our Repos
 
-A new Flutter project.
+- [Frontend (this)](https://github.com/GulatiGarvit/SuperPaws) 
+- [Backend](https://google.com)  
+- [Blockchain](https://google.com)
 
-## Getting Started
+## Tech
 
-This project is a starting point for a Flutter application.
+SuperPaws has a delicately selected tech stack for all of its components:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter - Cross-platform mobile app development!
+- Firebase - A reliable and quick Mobile BaaS
+- Node,js - evented I/O for the backend
+- Express - Fast node.js network app framework
+- Solidity - To write Smart Contracts based on ETH
