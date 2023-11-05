@@ -10,7 +10,9 @@
 ## Screenshots
 <p align="center">
   <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/petpage.png?alt=media&token=2d44163d-9193-477a-87b6-039160111722" width="350" title="hover text">
-  <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/petpage.png?alt=media&token=2d44163d-9193-477a-87b6-039160111722" width="350" title="hover text">
+  <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/login.png?alt=media&token=f246b1ff-aba2-4a59-9af2-7f1a447c0ab1" width="350" title="hover text">
+  <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/dashboard.png?alt=media&token=e27a496f-fafb-4fa8-8031-38145678ea87" width="350" title="hover text">
+  <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/arphone.png?alt=media&token=1985e9a8-e625-40b5-8342-00096f5f225b" width="350" title="hover text">
 
 ## Tech
 
