@@ -14,6 +14,9 @@
   <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/dashboard.png?alt=media&token=e27a496f-fafb-4fa8-8031-38145678ea87" width="350" title="hover text">
   <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/arphone.png?alt=media&token=1985e9a8-e625-40b5-8342-00096f5f225b" width="350" title="hover text">
 
+## Videos
+<video src='https://github.com/timetooth/SuperPawsOpenCV/blob/main/model/video/outs/rethua2.mp4_outfull.mp4' width=180/>
+
 ## Tech
 
 SuperPaws has a delicately selected tech stack for all of its components:
@@ -29,7 +32,7 @@ SuperPaws has a delicately selected tech stack for all of its components:
 - Razorpay
 - ARCore
 
-  ## Our Team
-  - Garvit Gulati
-  - Ishita
-  - Keshav Singla
+## Our Team
+- Garvit Gulati
+- Ishita
+- Keshav Singla
