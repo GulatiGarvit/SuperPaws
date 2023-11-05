@@ -8,7 +8,8 @@
 - [YOLOv8](https://github.com/timetooth/SuperPawsOpenCV)
 
 ## Screenshots
-![Greeting Page](https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/petpage.png?alt=media&token=2d44163d-9193-477a-87b6-039160111722)
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/petpage.png?alt=media&token=2d44163d-9193-477a-87b6-039160111722" width="350" title="hover text">
 
 ## Tech
 
