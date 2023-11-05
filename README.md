@@ -3,8 +3,9 @@
 ## Our Repos
 
 - [Frontend (this)](https://github.com/GulatiGarvit/SuperPaws) 
-- [Backend](https://google.com)  
-- [Blockchain](https://google.com)
+- [Backend](https://github.com/frost-ish/SuperPawsBackend)  
+- [Blockchain](https://github.com/timetooth/SuperPawsTruffle)
+- [YOLOv8](https://github.com/timetooth/SuperPawsOpenCV)
 
 ## Tech
 
@@ -15,3 +16,8 @@ SuperPaws has a delicately selected tech stack for all of its components:
 - Node,js - evented I/O for the backend
 - Express - Fast node.js network app framework
 - Solidity - To write Smart Contracts based on ETH
+- MongoDB
+- YOLOv8
+- Remix IDE
+- Razorpay
+- ARCore
