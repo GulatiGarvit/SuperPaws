@@ -20,8 +20,10 @@ class OnboardingPage extends StatefulWidget {
   Future<void> signInWithGoogle(BuildContext context) async {
     await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform);
+        LoadingDialog(context).showLoader(false);
     GoogleAuth.signInWithGoogle().then(
       (value) {
+        LoadingDialog(context).cancelLoader();
         user = value.user!;
         Fluttertoast.showToast(msg: "Hi, ${user!.providerData[0].displayName}");
         Navigator.pushReplacement(
