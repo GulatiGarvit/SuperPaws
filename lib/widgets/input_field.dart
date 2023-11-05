@@ -6,9 +6,13 @@ class MyInputField extends StatefulWidget {
   final Function onChanged;
   String? error;
   String? prefill;
+  final double verticalPadding;
+  final double borderRadius;
   MyInputField(
       {this.label,
       required this.onChanged,
+      this.borderRadius = 16,
+      this.verticalPadding = 20,
       this.error,
       this.prefill,
       super.key});
@@ -18,7 +22,6 @@ class MyInputField extends StatefulWidget {
 }
 
 class _MyInputFieldState extends State<MyInputField> {
-  final borderRadius = 16.0;
   final colorUnfocused = Colors.grey;
   late TextEditingController controller;
 
@@ -42,9 +45,10 @@ class _MyInputFieldState extends State<MyInputField> {
           decoration: InputDecoration(
             hintText: widget.label,
             hintStyle: textMediumHint,
-            contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+            contentPadding: EdgeInsets.symmetric(
+                vertical: widget.verticalPadding, horizontal: 16),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
+              borderRadius: BorderRadius.circular(widget.borderRadius),
               borderSide: BorderSide(color: colorUnfocused),
             ),
           ),

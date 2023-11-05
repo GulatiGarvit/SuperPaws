@@ -9,9 +9,45 @@ const textLargePrimary = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
+const textSemiLargePrimary = TextStyle(
+  color: LightModeColors.colorTextPrimary,
+  fontSize: 18,
+  height: 1.2,
+  fontFamily: "Avenir",
+  fontWeight: FontWeight.bold,
+);
+
+const textSemiLargePrimarySemiBold = TextStyle(
+  color: LightModeColors.colorTextPrimary,
+  fontSize: 18,
+  height: 1.2,
+  fontFamily: "Avenir",
+  fontWeight: FontWeight.w600,
+);
+
+const textLargeLightBold = TextStyle(
+    color: Colors.white,
+    fontSize: 22,
+    fontFamily: "Avenir",
+    fontWeight: FontWeight.bold);
+
 const textLargePrimaryTheme = TextStyle(
     color: LightModeColors.colorPrimary,
     fontSize: 22,
+    height: 1.2,
+    fontFamily: "Avenir",
+    fontWeight: FontWeight.bold);
+
+const textSmallPrimaryTheme = TextStyle(
+    color: LightModeColors.colorPrimary,
+    fontSize: 12,
+    height: 1.2,
+    fontFamily: "Avenir",
+    fontWeight: FontWeight.bold);
+
+const textMediumPrimaryTheme = TextStyle(
+    color: LightModeColors.colorPrimary,
+    fontSize: 14,
     height: 1.2,
     fontFamily: "Avenir",
     fontWeight: FontWeight.bold);
@@ -28,6 +64,12 @@ const textSmallLightBold = TextStyle(
     fontSize: 12,
     fontFamily: "Avenir",
     fontWeight: FontWeight.bold);
+
+const textSmallLight = TextStyle(
+  color: Colors.white,
+  fontSize: 12,
+  fontFamily: "Avenir",
+);
 
 const textSmallPrimary = TextStyle(
     color: LightModeColors.colorTextPrimary,
@@ -79,6 +121,9 @@ const textMediumLightBold = TextStyle(
     fontSize: 14,
     fontFamily: "Avenir",
     fontWeight: FontWeight.bold);
+
+const textMediumLight =
+    TextStyle(color: Colors.white, fontSize: 14, fontFamily: "Avenir");
 
 const textMediumPrimary = TextStyle(
     color: LightModeColors.colorTextPrimary,

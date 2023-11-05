@@ -9,7 +9,7 @@ import 'package:super_paws/auth/google_auth.dart';
 import 'package:super_paws/colors/dark_mode.dart';
 import 'package:super_paws/colors/light_mode.dart';
 import 'package:super_paws/firebase_options.dart';
-import 'package:super_paws/pages/find_pets_shelter.dart';
+import 'package:super_paws/pages/dashboard.dart';
 import 'package:super_paws/styles/text_styles.dart';
 import 'package:super_paws/utils/loading_dialog.dart';
 import 'package:super_paws/widgets/input_field.dart';
@@ -27,7 +27,7 @@ class OnboardingPage extends StatefulWidget {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => FindPetsAndSheltersPage(),
+            builder: (context) => Dashboard(),
           ),
         );
       },
@@ -48,9 +48,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
   String phone = "";
   String name = "";
   String verificationId = "";
+  String? nameError;
   String otp = "";
   String? error;
   FirebaseAuth mAuth = FirebaseAuth.instance;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   final fadeDuration = const Duration(milliseconds: 200);
   final slideUpDuration = const Duration(milliseconds: 400);
@@ -616,6 +622,31 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                                   await mAuth
                                                       .signInWithCredential(
                                                           credential);
+                                                  if (mAuth.currentUser!
+                                                          .displayName !=
+                                                      null) {
+                                                    Fluttertoast.showToast(
+                                                        msg:
+                                                            "Welcome ${mAuth.currentUser!.displayName}");
+                                                    Navigator.pushReplacement(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Dashboard(),
+                                                      ),
+                                                    );
+                                                    return;
+                                                  }
+                                                  setState(() {
+                                                    isThird = !isThird;
+                                                  });
+                                                  await Future.delayed(
+                                                    const Duration(
+                                                        milliseconds: 100),
+                                                  );
+                                                  setState(() {
+                                                    isFourth = !isFourth;
+                                                  });
                                                 } catch (error) {
                                                   Fluttertoast.showToast(
                                                       msg: "Invalid OTP");
@@ -667,12 +698,156 @@ class _OnboardingPageState extends State<OnboardingPage> {
                                 ],
                               ),
                             )
-                          : Container(),
+                          : isFourth
+                              ? AnimatedOpacity(
+                                  opacity: isFirst ? 0 : 1,
+                                  duration: fadeDuration,
+                                  child: Stack(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Align(
+                                          alignment: Alignment.topRight,
+                                          child: IconButton(
+                                            icon: const Icon(
+                                              Icons.close,
+                                              weight: 10,
+                                              size: 24,
+                                            ),
+                                            onPressed: () async {},
+                                          ),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(26),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            const SizedBox(
+                                              height: 26,
+                                            ),
+                                            RichText(
+                                              text: const TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                      text: "Register",
+                                                      style:
+                                                          textLargePrimaryTheme),
+                                                ],
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              height: 8,
+                                            ),
+                                            Text(
+                                              "Let's get to know about each other",
+                                              style: textMediumPrimary,
+                                            ),
+                                            const SizedBox(
+                                              height: 26,
+                                            ),
+                                            Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                const Text(
+                                                  "Full Name",
+                                                  style:
+                                                      textMediumPrimarySemiBold,
+                                                ),
+                                                const SizedBox(
+                                                  height: 8,
+                                                ),
+                                                MyInputField(
+                                                  onChanged: (value) {
+                                                    setState(() {
+                                                      nameError = null;
+                                                      name = value;
+                                                    });
+                                                  },
+                                                  label:
+                                                      "What should we call you?",
+                                                  error: nameError,
+                                                )
+                                              ],
+                                            ),
+                                            const SizedBox(
+                                              height: 64,
+                                            ),
+                                            Align(
+                                              alignment: Alignment.center,
+                                              child: ElevatedButton(
+                                                onPressed: () async {
+                                                  if (name.isEmpty) {
+                                                    setState(() {
+                                                      nameError =
+                                                          "Please enter your name";
+                                                    });
+                                                    return;
+                                                  }
+                                                  LoadingDialog(context)
+                                                      .showLoader(false);
+                                                  await mAuth.currentUser!
+                                                      .updateDisplayName(name);
+                                                  LoadingDialog(context)
+                                                      .cancelLoader();
+                                                  Fluttertoast.showToast(
+                                                      msg: "Welcome $name!");
+                                                  Navigator.pushReplacement(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (ctx) =>
+                                                          Dashboard(),
+                                                    ),
+                                                  );
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                    foregroundColor:
+                                                        Colors.white,
+                                                    padding: const EdgeInsets
+                                                        .symmetric(
+                                                        vertical: 18,
+                                                        horizontal: 36),
+                                                    splashFactory:
+                                                        InkRipple.splashFactory,
+                                                    backgroundColor:
+                                                        LightModeColors
+                                                            .colorPrimary),
+                                                child: const Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: [
+                                                    Text(
+                                                      "Let's go",
+                                                      style:
+                                                          textMediumLightBold,
+                                                    ),
+                                                    Icon(
+                                                      Icons
+                                                          .chevron_right_rounded,
+                                                      size: 20,
+                                                      color: Colors.white,
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                            const Spacer(),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              : Container(),
             ),
           ),
         ),
         onWillPop: () async {
-          if (isFirst) {
+          if (isFirst || isFourth) {
             return true;
           } else if (isThird) {
             setState(() {
