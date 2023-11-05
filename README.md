@@ -15,7 +15,7 @@
   <img src="https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/arphone.png?alt=media&token=1985e9a8-e625-40b5-8342-00096f5f225b" width="350" title="hover text">
 
 ## Videos
-![](https://firebasestorage.googleapis.com/v0/b/superpets-1.appspot.com/o/rethua2.mp4_outfull.gif?alt=media&token=5fac097d-f308-44f3-8e52-3eecadd80641)
+<video src='https://github.com/timetooth/SuperPawsOpenCV/blob/main/model/video/outs/testvid.mp4_out.mp4' width=180></video>
 
 ## Tech
 
